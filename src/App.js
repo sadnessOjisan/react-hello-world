@@ -10,6 +10,10 @@ class App extends Component {
     count: 0
   };
 
+  componentDidMount() {
+    alert("これからみなさんにはカウントを数えてもらいます。");
+  }
+
   countup = () => {
     const currentCount = this.state.count;
     this.setState({
@@ -31,7 +35,6 @@ class App extends Component {
         <Header />
         <Hello />
         <Hello name="john" />
-        <Hello name="ynakamura" />
         <p className="count">{count}</p>
         <div className="button-wrapper">
           <CountButton operator="+" handleClick={this.countup} />
